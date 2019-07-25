@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Elena en su salsa</title>
+    <link>http://example.org/pages.html</link>
+    <description>Recent content in Pages on Elena en su salsa</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Sun, 18 Jan 2015 16:47:53 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/pages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sobre mi</title>
+      <link>http://example.org/sobre-mi.html</link>
+      <pubDate>Sun, 18 Jan 2015 16:47:53 +0000</pubDate>
+      
+      <guid>http://example.org/sobre-mi.html</guid>
+      <description>¡Hola salseros, bienvenidos a mi blog!
+Elena en su salsa comienza su andadura en Enero de 2010 fruto de cambios e idas y venidas personales de su creadora. Andaluza de pura cepa y catalana adoptada, y con más motivación por el comer que por el cocinar, me ví obligada a mejorar mis artes culinarias al separarme del nido familiar y, sobre todo, de mi madre, de la cual he podido aprender y plasmar sus trucos en muchas de mis recetas.</description>
+    </item>
+    
+    <item>
+      <title>Contacto</title>
+      <link>http://example.org/contacto.html</link>
+      <pubDate>Sun, 18 Jan 2015 16:42:01 +0000</pubDate>
+      
+      <guid>http://example.org/contacto.html</guid>
+      <description>Si lo deseas, puedes contactar conmigo a través del formulario de contacto disponible en esta página. Si no, también puedes encontrarme a través de las redes sociales!
+Nombre (obligatorio)  Correo electrónico (obligatorio)  Comentario (obligatorio)   Contactar!   </description>
+    </item>
+    
+  </channel>
+</rss>
