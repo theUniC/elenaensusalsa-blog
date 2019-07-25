@@ -1,0 +1,5 @@
+{{ define "content" }}
+    {{ range .Paginator.Pages }}
+    {{ partial "recipe.html" (dict "IsSingle" false "Permalink" .Permalink "Title" .Title "Content" .Content "PublishDate" .PublishDate "Params" .Params) }}
+    {{ end }}
+{{ end }}

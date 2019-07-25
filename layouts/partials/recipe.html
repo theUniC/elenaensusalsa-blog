@@ -1,0 +1,9 @@
+<article class="recipe">
+    {{ if not .IsSingle }}<h2>{{ else }}<h1>{{ end }}<a href="{{ .Permalink }}">{{ .Title }}</a>{{ if not .IsSingle }}</h2>{{ else }}</h1>{{ end }}
+    <section class="meta mb-3">
+        {{ dateFormat "02/01/2006" .PublishDate }} – <a href="{{ .Permalink }}/#comments">Déjame un comentario!</a>
+    </section>
+    <section class="body">
+        {{ .Content }}
+    </section>
+</article>

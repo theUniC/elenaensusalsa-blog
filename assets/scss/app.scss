@@ -1,0 +1,164 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+small {
+    display: block;
+    color: #888;
+}
+
+main.container, footer.container {
+    max-width: 900px;
+}
+
+footer.container {
+    margin-top: 30px;
+    padding: 30px 0;
+    border-top: 1px dashed #aaa;
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        padding-top: 30px;
+    }
+}
+
+@media (min-width: 980px) {
+    body {
+        padding-bottom: 40px;
+    }
+}
+
+body > main.container {
+    padding: 80px 15px 0; /* 80px to make the container go all the way to the bottom of the topbar */
+}
+
+img.wp-smiley,
+img.emoji {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 .07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important
+}
+
+img#wpstats {
+    display: none
+}
+
+.site-title {
+    font-size: 2.5em !important;
+    font-weight: 400;
+    line-height: 1;
+
+    a, a:visited {
+        font-family: 'Amatic SC', cursive;
+        font-size: 2.5em !important;
+        color: #B9B9B9;
+        text-decoration: none;
+    }
+}
+
+.site-description {
+    color: #B0DDD3;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.2em;
+}
+
+.site-title-container {
+    min-height: 10em;
+}
+
+.menu .nav-link {
+    font-family: 'Sofia', cursive;
+    color: #a6a2a2;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+body {
+    background-image: url("/images/bowontop-bg.jpg");
+    background-position: left top;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: scroll
+}
+
+.site-container {
+    background-color: white;
+}
+
+.simple-social-icons {
+    ul li {
+        a, a:hover, a:focus {
+            background-color: #A7DFCB !important;
+            border-radius: 25px;
+            color: #fff !important;
+            border: 0px #fff solid !important;
+            font-size: 18px;
+            padding: 9px
+        }
+
+        a:focus {
+            outline: 1px dotted #666 !important;
+        }
+    }
+}
+
+@mixin title {
+    font-family: 'Sofia', cursive;
+    color: #B0DDD3;
+}
+
+.recipe {
+    h1, h2 {
+        @include title;
+        a, a:visited {
+            color: #B0DDD3;
+            text-decoration: none;
+        }
+        padding: 10px 0;
+    }
+
+    .meta {
+        a, a:visited {
+            font-weight: bold;
+        }
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .body img {
+        @include img-fluid;
+    }
+}
+
+.about-me h4 {
+    @include title;
+    text-align: center;
+}
+
+.food-title {
+    @include title;
+}
+
+h1 {
+    @include title;
+}
+
+.site-footer {
+    background-color: #b2b1b1;
+    color: #fff;
+    font-size: 12px;
+    padding: 36px;
+    text-align: center;
+    a, a:visited, a:hover {
+        text-decoration: none;
+        font-weight: bolder;
+        color: white;
+    }
+}

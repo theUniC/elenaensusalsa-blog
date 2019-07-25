@@ -1,0 +1,15 @@
+{{ define "content" }}
+<h1 class="food-title">{{ .Title }}</h1>
+{{ range .Params.ps }}
+<p class="text-justify">{{ . }}</p>
+{{ end }}
+<ul>
+    {{ range .Data.Pages.ByTitle }}
+    <li>
+        <a href="{{.RelPermalink}}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
+
+{{ define "paginator" }}&nbsp;{{ end }}

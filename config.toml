@@ -1,0 +1,23 @@
+baseURL = "http://example.org/"
+languageCode = "es-ES"
+title = "Elena en su salsa"
+uglyURLs = true
+disqusShortname = "elenaensusalsa"
+enableRobotsTXT = true
+googleAnalytics = "UA-58684151-1"
+[permalinks]
+  posts = "/:slug/"
+  pages = "/:slug/"
+  foods = "/:slug/"
+[params]
+  description = "Recetas felices de una granadina en Catalunya"
+  title = "Elena en su salsa"
+[taxonomies]
+  food = "foods"
+  tag = "tags"
+  category = "categories"
+[menu]
+  [[menu.main]]
+    name = "Inicio"
+    url = "/"
+    weight = -110

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="dns-prefetch" href="//elenaensusalsa.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com/css?family=Sofia%3A400&#038;ver=3.0.1">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com/css?family=Amatic+SC&display=swap">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap">
+    <link rel="stylesheet" id="google-fonts-css" href="//fonts.googleapis.com/css?family=Sofia%3A400&#038;ver=3.0.1" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    {{ $style := resources.Get "scss/app.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <script src="https://kit.fontawesome.com/5b22ffc85f.js"></script>
+    {{ template "_internal/google_analytics.html" . }}
+    {{ template "_internal/google_analytics_async.html" . }}
+</head>
+<body>
+    <div class="container site-container pt-2">
+        <header class="site-header">
+            <div class="row">
+                <div class="col-md-2 col-lg-2 col-xl-2"></div>
+                <div class="col-md-8 col-lg-8 col-xl-8">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 col-xl-3">
+                            <a href="{{ .Site.BaseURL }}">
+                                <img src="{{ .Site.BaseURL }}/images/logo.png" />
+                            </a>
+                        </div>
+                        <div class="col-md-9 col-lg-9 col-xl-9">
+                            <div class="row h-100 align-items-center site-title-container">
+                                <div class="col">
+                                    {{ if .Page.IsHome }}<h1 class="site-title">{{ else }}<h2 class="site-title">{{ end }}
+                                        <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+                                    {{ if .Page.IsHome }}</h1>{{ else }}</h2>{{ end }}
+                                    <p class="site-description">💖 {{ .Site.Params.Description }} 💖</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2"></div>
+            </div>
+        </header>
+        {{ partial "menu.html" . }}
+        <div class="row pt-2">
+            <div class="col-8">
+                {{ block "content" . }}
+                {{ end }}
+            </div>
+            <div class="col-4">
+                <aside class="sidebar p-3">
+                    <section class="simple-social-icons">
+                        <ul class="nav">
+                            <li class="nav-item mr-2">
+                                <a class="nav-link" target="_blank" href='&#109;a&#105;lto&#58;e%&#54;Cen&#97;&#101;%6E&#37;73us%6&#49;l&#37;73a&#64;gmail%&#50;Ec&#37;6Fm'>
+                                    &nbsp;<i class="fas fa-at"></i>&nbsp;
+                                </a>
+                            </li>
+                            <li class="nav-item mr-2">
+                                <a class="nav-link" href="http://www.facebook.com/pages/Elena-en-su-Salsa/144100102391443" target="_blank">
+                                    &nbsp;<i class="fab fa-facebook"></i>&nbsp;
+                                </a>
+                            </li>
+                            <li class="nav-item mr-2">
+                                <a class="nav-link" href="http://instagram.com/elenaensusalsa" target="_blank">
+                                    &nbsp;<i class="fab fa-instagram"></i>&nbsp;
+                                </a>
+                            </li>
+                            <li class="nav-item mr-2">
+                                {{ with .OutputFormats.Get "rss" -}}
+                                <a class="nav-link" href="{{ .Permalink }}" target="_blank">
+                                    &nbsp;<i class="fas fa-rss-square"></i>&nbsp;
+                                </a>
+                                {{ end -}}
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://twitter.com/Elenaensusalsa" target="_blank">
+                                    &nbsp;<i class="fab fa-twitter-square"></i>&nbsp;
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="about-me mt-4">
+                        <h4>Bienvenid@!!</h4>
+                        <p class="text-justify">Granaína de pura cepa, cocinillas novata y  glotona por excelencia, me decidí a crear este blog coincidiendo con mi nueva vida en Barcelona. En él encontraréis recetas divinas y súper sencillas con un ingrediente común, el amor con el que están hechas. Tanto si se te da bien la cocina como si es la primera vez que vas a cocinar algo, pasa y quédate! <a class="pagelink" href="https://elenaensusalsa.com/sobre-mi/"></a></p>
+                    </section>
+                </aside>
+            </div>
+        </div>
+        {{ block "paginator" . }}
+        {{ if (len .Pages) 0 }}
+        <div class="row justify-content-center">
+            <div class="col-5">
+                <nav>
+                    {{ template "_internal/pagination.html" . }}
+                </nav>
+            </div>
+        </div>
+        {{ end }}
+        {{ end }}
+        <div class="row">
+            <div class="col p-0 mt-2">
+                <footer class="site-footer">
+                    <p class="m-0">Copyright &copy; Elena Martínez 2019 – Made with ❤ by <a href="https://github.com/theUniC" target="_blank" rel="nofollow">@theUniC</a>.</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+{{ define "content" }}
+    {{ partial "recipe.html" (dict "IsSingle" true "Permalink" .Permalink "Title" .Title "Content" .Content "PublishDate" .PublishDate) }}
+    {{ partial "disqus.html" . }}
+{{ end }}
