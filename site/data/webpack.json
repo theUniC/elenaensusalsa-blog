@@ -1,0 +1,28 @@
+{
+  "index": {
+    "css": "index.0b190.css",
+    "js": "index.0b190.js"
+  },
+  "": {
+    "woff2": [
+      "/2cd2be177470d5096992572176bbe76e.woff2",
+      "/f861a57c52ef711cf807a3eec92c0e17.woff2"
+    ],
+    "eot": [
+      "/3165b14bbf3b64fca65829ecde6b800d.eot",
+      "/a547e21eceadf53602caf057be9ad9fd.eot"
+    ],
+    "woff": [
+      "/457cb96b6191ed105c4fe8463957f70d.woff",
+      "/657a469469a2fc38a2901c68a3d56512.woff"
+    ],
+    "ttf": [
+      "/5ee32f5c8598e1a63ddf1aad4ffe54f4.ttf",
+      "/f2e186cfab4787d4ef6f1bb192aa9a1b.ttf"
+    ],
+    "svg": [
+      "/f249e44df3044e7b0d665b550569ddf0.svg",
+      "/fdc155d57b7351ef85b3028ea3cfc048.svg"
+    ]
+  }
+}

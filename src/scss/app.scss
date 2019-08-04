@@ -1,4 +1,11 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import url("//fonts.googleapis.com/css?family=Sofia%3A400&#038;ver=3.0.1");
+@import url("//fonts.googleapis.com/css?family=Amatic+SC&display=swap");
+@import url("//fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap");
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~bootstrap/scss/bootstrap";
 
 small {
     display: block;
@@ -48,16 +55,43 @@ img#wpstats {
     display: none
 }
 
+.logo {
+    width: 174px;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        width: inherit;
+    }
+}
+
 .site-title {
-    font-size: 2.5em !important;
     font-weight: 400;
     line-height: 1;
 
     a, a:visited {
         font-family: 'Amatic SC', cursive;
-        font-size: 2.5em !important;
         color: #B9B9B9;
         text-decoration: none;
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-title {
+        text-align: center;
+    }
+    .site-description {
+        text-align: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .site-title {
+        font-size: 1.5em;
+    }
+    .site-description {
+        font-size: 0.9em !important;
     }
 }
 
@@ -90,13 +124,23 @@ body {
     background-color: white;
 }
 
+body {
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    body {
+        width: inherit !important;
+    }
+}
+
 .simple-social-icons {
     ul li {
         a, a:hover, a:focus {
             background-color: #A7DFCB !important;
             border-radius: 25px;
             color: #fff !important;
-            border: 0px #fff solid !important;
+            border: 0 #fff solid !important;
             font-size: 18px;
             padding: 9px
         }
